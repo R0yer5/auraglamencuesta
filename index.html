@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción | Aura Glam Studio</title>
+    <!-- Enlace a tu archivo CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <main class="container">
+        <!-- PÁGINA 1: Inicio -->
+        <section id="page1" class="view active">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Aura Glam Studio" class="logo-img">
+            </div>
+            
+            <p class="motivational-text">"Queremos seguir mejorando para que puedas relucir aún más." ✨</p>
+            
+            <div class="form-group">
+                <label for="clienteNombre">¿Cuál es tu nombre?</label>
+                <input type="text" id="clienteNombre" placeholder="Escribe tu nombre y apellido" autocomplete="off">
+                <span id="errorNombre" class="error-msg">Por favor, ingresa tu nombre para continuar.</span>
+            </div>
+
+            <button class="btn" id="btn-siguiente">Ir a cuestionario ➔</button>
+        </section>
+
+      <!-- PÁGINA 2: Encuesta -->
+        <section id="page2" class="view">
+            <div class="logo-container-small">
+                <img src="assets/logo.png" alt="Aura Glam Studio" class="logo-img-small">
+            </div>
+            
+            <h2 class="page2-title">"Gracias por dejarte engreír, valoramos tu preferencia y queremos seguir brindándote siempre lo mejor." ✨</h2>
+            
+            <div class="form-group">
+                <label>1. ¿Cómo llegaste a Aura Glam Studio hoy? 📍</label>
+                <div class="options-grid" id="q1-local">
+                    <div class="option-btn" data-value="Tenía cita programada">Tenía cita 📅</div>
+                    <div class="option-btn" data-value="Pasaba por aquí">Pasaba por aquí 🚶‍♀️</div>
+                    <div class="option-btn" data-value="Recomendación">Recomendación 👯‍♀️</div>
+                    <div class="option-btn" data-value="Redes sociales">Redes sociales 📱</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>2. Servicios realizados (Selecciona 1 o más) 💅</label>
+                <div class="options-grid" id="q2-servicios">
+                    <div class="option-btn multi" data-value="Manicura">Manicura</div>
+                    <div class="option-btn multi" data-value="Pedicura">Pedicura</div>
+                    <div class="option-btn multi" data-value="Lifting">Lifting</div>
+                    <div class="option-btn multi" data-value="Depilación">Depilación</div>
+                    <div class="option-btn multi" data-value="Maquillaje">Maquillaje</div>
+                    <div class="option-btn multi" data-value="Peinado">Peinado</div>
+                    <div class="option-btn multi" data-value="Planchado">Planchado</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>3. ¿Cómo calificarías la atención brindada? ⭐</label>
+                <div class="stars-container" id="stars-atencion">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>4. ¿Te gustó el detalle que se te brindó? 🎁</label>
+                <div class="stars-container" id="stars-detalle">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>5. ¿Nos recomendarías con tus amigas/familiares? 💖</label>
+                <div class="options-grid" id="q5-recomendacion">
+                    <div class="option-btn" data-value="¡Definitivamente sí!">¡Definitivamente sí! 😍</div>
+                    <div class="option-btn" data-value="Probablemente">Probablemente 🙂</div>
+                    <div class="option-btn" data-value="No estoy segura">No estoy segura 🤔</div>
+                </div>
+            </div>
+
+            <!-- Cuadro de texto mejorado -->
+            <div class="form-group textarea-group">
+                <label>¿Algún comentario extra que nos ayude a mejorar? 💬</label>
+                <textarea id="comentarios" placeholder="Escribe aquí tus sugerencias (Opcional)..."></textarea>
+            </div>
+            
+            <div id="errorGeneral" class="error-msg" style="text-align:center; margin-bottom:15px;">Por favor, califica con estrellas y selecciona las opciones para continuar.</div>
+
+            <button class="btn" id="btn-enviar">ENVIAR RESPUESTAS 📲</button>
+        </section>
+    </main>
+
+    <!-- Enlace a JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
